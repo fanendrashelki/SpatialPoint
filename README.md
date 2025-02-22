@@ -82,6 +82,5 @@ GET /polygons
 GET http://localhost:8000/polygons/
 
 
-## License
-This project is licensed under the MIT License.
+
 
