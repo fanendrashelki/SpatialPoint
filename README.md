@@ -1,28 +1,62 @@
-# Install Dependencies
+# Spatial Data API
+
+This API allows you to store and retrieve spatial data, including points and polygons, using MongoDB.
+
+## Installation
+
+### Install Dependencies
+
 npm install
 
-# Configure Environment Variables
+
+### Configure Environment Variables
+Create a `.env` file and set the following values:
+
 MONGO_URI=mongodb://localhost:27017/DBName
 PORT=8000
 
-# Start the Server
+
+## Start the Server
+
 npm start
-# API Requests & Responses
-## Create a Point
-http://localhost:8000/points/
+
+
+## API Endpoints
+
+### Create a Point
+**Endpoint:**
+
 POST /points
+
+
+**Request Body:**
+
 {
     "name": "Point B",
     "latitude": 37.7749,
     "longitude": -122.4194
 }
-## Get a Point
-GET /points
-http://localhost:8000/points/
 
-## Create a Polygon
-http://localhost:8000/polygons
+
+
+### Get All Points
+
+GET /points
+
+
+**Example Request:**
+
+ GET http://localhost:8000/points/
+
+
+### Create a Polygon
+**Endpoint:**
+
 POST /polygons
+
+
+**Request Body:**
+
 {
   "name": "Central",
   "coordinates": [
@@ -35,6 +69,19 @@ POST /polygons
     ]
   ]
 }
-## Get a Polygon
+
+
+
+
+### Get All Polygons
+
 GET /polygons
-http://localhost:8000/points/
+
+**Example Request:**
+
+GET http://localhost:8000/polygons/
+
+
+## License
+This project is licensed under the MIT License.
+
